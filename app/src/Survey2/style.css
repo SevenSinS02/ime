@@ -1,0 +1,236 @@
+.backdrop {
+  z-index: 1;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-name: animate-backdrop;
+  animation-name: animate-backdrop;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes animate-backdrop {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@keyframes animate-backdrop {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+.surveyContainer {
+  height: 100vh;
+  background: url(../images/bg-Q1.png) center/cover no-repeat !important;
+  border: none !important;
+}
+
+.surveyChartContainer {
+  height: 100vh;
+  background: url(../images/bg-Q2.png) center/cover no-repeat !important;
+  border: none !important;
+}
+
+.surveyQuestion {
+  margin: 2rem 0 !important;
+  word-spacing: 5px;
+  font-size: 3rem !important;
+  line-height: 3rem !important;
+  font-family: myFirstFont !important;
+}
+
+.chartContainer {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  padding: 2.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  width: calc(100% - 75px);
+}
+
+.buttonWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.slider {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.yesSlider {
+  position: absolute;
+  left: 20%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.noSlider {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.modalHeader {
+  font-family: myFirstFont !important;
+  word-spacing: 5px;
+  background-color: #753e19 !important;
+  padding: 1rem 0 !important;
+}
+
+.font {
+  font-family: myFirstFont !important;
+}
+
+.question {
+  vertical-align: middle !important;
+}
+
+.barContainer {
+  padding: 2rem 10rem;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.bar {
+  display: inline-block;
+  min-height: 30px;
+  width: 3rem;
+  color: #fff;
+  margin: 0 2rem;
+  padding: 5px 0;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.axis {
+  border-bottom: 1rem solid #753e19;
+}
+
+.iconButton {
+  display: inline-block;
+  background-color: #ff9900;
+  border: 5px solid #ff9900 !important;
+  border-radius: 0.28571429rem;
+  padding: 10px;
+}
+
+.buttons {
+  margin: 5rem 0;
+  height: 60%;
+  background-color: #cf7500;
+}
+
+.button {
+  background-color: #753e19 !important;
+  color: #fff !important;
+  margin: 0 0.25em !important;
+  font-family: myFirstFont !important;
+}
+
+.buttonHover {
+  background-color: #fff !important;
+  color: #ff9900 !important;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #fff !important;
+  color: #ff9900 !important;
+}
+
+.spacer {
+  height: 1vh;
+  background-color: #cf7500;
+}
+
+.wrapper {
+  text-align: center;
+  background-color: #cf7500;
+  padding: 0 2rem;
+}
+
+.submitButtonWrapper,
+.skipButtonWrapper {
+  display: inline-block;
+}
+
+.submitButtonWrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  -webkit-transform: translate(-50%, -10%);
+  transform: translate(-50%, -10%);
+}
+
+.proceedButtonWrapper {
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
+  -webkit-transform: translate(-5%, -2%);
+  transform: translate(-5%, -2%);
+}
+
+.submitButton {
+  color: #fff !important;
+  border-radius: 1rem !important;
+  font-family: myFirstFont !important;
+}
+
+.submitCommentButton {
+  color: #fff !important;
+  border-radius: 1rem !important;
+  font-family: myFirstFont !important;
+}
+
+.skipButton {
+  color: #fff !important;
+  font-family: myFirstFont !important;
+  border-radius: 1rem !important;
+  background-color: transparent !important;
+}
+
+.title {
+  display: inline-block !important;
+  margin: 0 2rem;
+  width: 3rem;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #fff;
+  font-weight: 600;
+}

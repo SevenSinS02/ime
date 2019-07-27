@@ -1,0 +1,210 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+@import '~semantic-ui/dist/semantic.min.css';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~react-simple-keyboard/build/css/index.css';
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/GOTHIC.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(fonts/GOTHICB.ttf);
+  font-weight: bold;
+}
+
+html {
+  font-size: 140%;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: myFirstFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url(src/images/bg.png) center/cover no-repeat;
+  min-height: 100vh;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.ui.basic.button:hover,
+.ui.basic.button:focus {
+  background: transparent !important;
+  color: #ff9900 !important;
+}
+
+.ui.form input[type='text'],
+.ui.form input[type='email'],
+.ui.form textarea {
+  -webkit-box-shadow: 0 0 5px #7a4412;
+  box-shadow: 0 0 5px #7a4412;
+  color: #ff9900 !important;
+}
+
+.simple-keyboard {
+  z-index: 9999999999;
+  position: fixed;
+  width: 50% !important;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  bottom: 0;
+}
+
+.simple-keyboard.hg-theme-default .hg-button {
+  height: 50px;
+}
+
+.ui.button:disabled {
+  background: radial-gradient(
+      circle farthest-corner at center center,
+      #f3c075,
+      #ff9900
+    )
+    no-repeat !important;
+}
+.fade {
+  position: absolute;
+  width: 100%;
+}
+
+.fades {
+  position: absolute;
+}
+
+.fade-appear,
+.fade-enter {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: -webkit-transform 450ms;
+  transition: -webkit-transform 450ms;
+  transition: transform 450ms;
+  transition: transform 450ms, -webkit-transform 450ms;
+}
+
+.fade-exit {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.fade-exit-active {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: background-color 150ms, -webkit-transform 300ms;
+  transition: background-color 150ms, -webkit-transform 300ms;
+  transition: background-color 150ms, transform 300ms;
+  transition: background-color 150ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.fades-appear,
+.fades-enter {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+.fades-appear-active,
+.fades-enter.fades-enter-active {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 450ms;
+  transition: -webkit-transform 450ms;
+  transition: transform 450ms;
+  transition: transform 450ms, -webkit-transform 450ms;
+}
+
+.fades-exit {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.fades-exit-active {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-transition: background-color 150ms, -webkit-transform 300ms;
+  transition: background-color 150ms, -webkit-transform 300ms;
+  transition: background-color 150ms, transform 300ms;
+  transition: background-color 150ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.slide-appear,
+.slide-enter {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.slide-appear-active,
+.slide-enter.slide-enter-active {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: -webkit-transform 450ms;
+  transition: -webkit-transform 450ms;
+  transition: transform 450ms;
+  transition: transform 450ms, -webkit-transform 450ms;
+}
+
+.alert-enter {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.alert-enter-active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: opacity 450ms, -webkit-transform 450ms;
+  transition: opacity 450ms, -webkit-transform 450ms;
+  transition: opacity 450ms, transform 450ms;
+  transition: opacity 450ms, transform 450ms, -webkit-transform 450ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: opacity 450ms, -webkit-transform 450ms;
+  transition: opacity 450ms, -webkit-transform 450ms;
+  transition: opacity 450ms, transform 450ms;
+  transition: opacity 450ms, transform 450ms, -webkit-transform 450ms;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #000 !important;
+  font-weight: 600;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000 !important;
+  font-weight: 600;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #000 !important;
+  font-weight: 600;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #000 !important;
+  font-weight: 600;
+}
